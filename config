@@ -37,6 +37,18 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 
+for_window [class=^.*] border pixel 4
+gaps inner 6
+gaps outer 4
+
+#class                          border      backgr.   text    indicator child_border
+client.focused                  #6ae6f2aa #6ae6f266 #ffffff #ffffff #6ae6f266
+client.focused_inactive         #3d7c8b66 #3d7c8b66 #ffffff #ffffff #3d7c8b66
+client.unfocused                #3d7c8b66 #3d7c8b66 #ffffff #ffffff #3d7c8b66
+client.placeholder              #3d7c8b66 #3d7c8b66 #ffffff #ffffff #3d7c8b66
+client.urgent                   #3d7c8b66 #3d7c8b66 #ffffff #ffffff #3d7c8b66
+client.background #3d7c8b66
+
 bindsym $mod+d exec dmenu_run -fn 'raleway' -nb white -nf darkgrey
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -158,22 +170,23 @@ bindsym $mod+r mode "resize"
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
-for_window [class=^.*] border pixel 2
-smart_gaps on
-smart_borders on
-gaps inner 2
-gaps outer 2
+
+
+
+
+
+
 bar {
 	i3bar_command i3bar -t
   	status_command i3blocks
 	font pango:raleway 7pt
-	colors {		
+	colors {
 		background #ffffff00
 		statusline #333333
 		focused_workspace #11111100 #333333aa #ccccccaa
 		inactive_workspace #11111100 #ccccccaa #333333aa
 		urgent_workspace #11111100 #6ae6f2aa  #111111aa
-	} 
+	}
 }
 
   exec xset -b
