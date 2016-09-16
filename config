@@ -184,7 +184,7 @@ bar {
 	font pango:raleway 7pt
 	colors {
 		background #ffffff00
-		statusline #333333
+		statusline #6ae6f2aa
 		focused_workspace #11111100 #333333aa #ccccccaa
 		inactive_workspace #11111100 #ccccccaa #333333aa
 		urgent_workspace #11111100 #6ae6f2aa  #111111aa
