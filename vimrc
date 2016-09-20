@@ -1,4 +1,6 @@
-" activates filetype detection
+execute pathogen#infect()
+"
+"activates filetype detection
 filetype plugin indent on
 
 " activates syntax highlighting among other things
@@ -12,3 +14,4 @@ set hidden
 " just hit backspace without this one and
 " see for yourself
 set backspace=indent,eol,start
+set nocompatible

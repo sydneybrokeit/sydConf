@@ -13,18 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
-# Before i3 v4.8, we used to recommend this one as the default:
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, its unicode glyph coverage is limited, the old
-# X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
+# font pango:monospace 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -42,7 +31,7 @@ gaps inner 4
 gaps outer 2
 smart_gaps on
 
-#class                          border      backgr.   text    indicator child_border
+#class                          border    backgr.   text    indic   child_border
 client.focused                  #6ae6f2aa #6ae6f266 #ffffff #ffffff #6ae6f266
 client.focused_inactive         #3d7c8b66 #3d7c8b66 #ffffff #ffffff #3d7c8b66
 client.unfocused                #3d7c8b66 #3d7c8b66 #ffffff #ffffff #3d7c8b66
@@ -106,7 +95,7 @@ bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
-
+# set workspace names to variables to make configuration easier
 set $ws1 "1:web/chat"
 set $ws2 "2:shell"
 set $ws3 "3:irc"
@@ -166,28 +155,27 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
+# Set backlight keys to increase/decrease by 5%
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
-new_window pixel
-new_float pixel
-
-
-
-
-
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+# This setup uses i3blocks with gaps patchset, available from AUR
 bar {
+	#-t option used to enable transparency, requires compton or other compositor
 	i3bar_command i3bar -t
   	status_command i3blocks
 	font xft:FontAwesome 14
 	colors {
+		#set transparent background
 		background #ffffff00
+		#set statusline for i3blocks
 		statusline #6ae6f2aa
-		focused_workspace #11111100 #333333aa #ccccccaa
+		#workspace	   #border   #bg       #text
+		focused_workspace  #11111100 #333333aa #ccccccaa
 		inactive_workspace #11111100 #ccccccaa #333333aa
-		urgent_workspace #11111100 #6ae6f2aa  #111111aa
+		urgent_workspace   #11111100 #6ae6f2aa #111111aa
 	}
 }
 
