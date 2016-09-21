@@ -3,9 +3,11 @@ I3_BLOCKS_CONF=$HOME/.i3blocks.conf
 I3_BLOCKS_DIR=$HOME/.i3blocks
 TERMITE_CONFIG=$HOME/.config/termite/config
 VIMRC_LOC=$HOME/.vimrc
+VIM_DIR=$HOME/.vim
 
-ln -s $PWD/i3config $I3_CONF
-ln -s $PWD/i3blocks.conf $I3_BLOCKS_CONF
-ln -s $PWD/i3blocks $I3_BLOCKS_DIR 
-ln -s $PWD/termite.config $TERMITE_CONFIG
-ln -s $PWD/vimrc $VIMRC_LOC
+ln -sf $PWD/i3config $I3_CONF
+ln -sf $PWD/i3blocks.conf $I3_BLOCKS_CONF
+ln -sf $PWD/i3blocks $I3_BLOCKS_DIR 
+ln -sf $PWD/termite.config $TERMITE_CONFIG
+ln -sf $PWD/vimrc $VIMRC_LOC
+ln -sf $PWD/vim/ $VIM_DIR
