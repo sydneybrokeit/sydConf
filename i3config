@@ -39,8 +39,8 @@ client.placeholder              #3d7c8b66 #3d7c8b66 #ffffff #ffffff #3d7c8b66
 client.urgent                   #3d7c8b66 #3d7c8b66 #ffffff #ffffff #3d7c8b66
 client.background #3d7c8b66
 
-bindsym $mod+d exec dmenu_run -fn 'raleway' -nb white -nf darkgrey
-
+# bindsym $mod+d exec dmenu_run -fn 'raleway' -nb white -nf darkgrey
+bindsym $mod+d exec rofi -show run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -182,7 +182,7 @@ bar {
   exec xset -b
   exec xset -dpms
   exec xset s off
-  exec nitrogen --restore
+  exec feh --bg-scale $HOME/.wallpapers/wallpaper.jpg
   exec --no-startup-id compton -b
   exec --no-startup-id nm-applet
   exec ~/.scripts/monitor.sh
