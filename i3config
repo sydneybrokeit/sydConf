@@ -182,7 +182,7 @@ bar {
   exec xset -b
   exec xset -dpms
   exec xset s off
-  exec feh --bg-scale $HOME/.wallpapers/wallpaper.jpg
+  exec sh ~/.fehbg 
   exec --no-startup-id compton -b
   exec --no-startup-id nm-applet
   exec ~/.scripts/monitor.sh
