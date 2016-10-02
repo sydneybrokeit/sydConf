@@ -173,9 +173,9 @@ bar {
 		#set statusline for i3blocks
 		statusline #e75671
 		#workspace	   #border   #bg       #text
-		focused_workspace  #11111100 #6190bdaa #ffffff
-		inactive_workspace #11111100 #ffffffaa #6190bd
-		urgent_workspace   #11111100 #e75671aa #ffffff
+		focused_workspace  #11111100 #6190bdaa #ffffffaa
+		inactive_workspace #11111100 #ffffffaa #6190bdaa
+		urgent_workspace   #11111100 #e75671aa #ffffffaa
 	}
 }
 
