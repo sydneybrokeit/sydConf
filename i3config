@@ -171,11 +171,11 @@ bar {
 		#set transparent background
 		background #ffffff00
 		#set statusline for i3blocks
-		statusline #6ae6f2aa
+		statusline #e75671
 		#workspace	   #border   #bg       #text
-		focused_workspace  #11111100 #333333aa #ccccccaa
-		inactive_workspace #11111100 #ccccccaa #333333aa
-		urgent_workspace   #11111100 #6ae6f2aa #111111aa
+		focused_workspace  #11111100 #6190bdaa #ffffff
+		inactive_workspace #11111100 #ffffffaa #6190bd
+		urgent_workspace   #11111100 #e75671aa #ffffff
 	}
 }
 
