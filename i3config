@@ -29,7 +29,6 @@ bindsym $mod+Shift+q kill
 for_window [class=^.*] border pixel 0 
 gaps inner 8
 gaps outer 0
-smart_gaps on
 
 #class                          border    backgr.   text    indic   child_border
 client.focused                  #6ae6f2aa #6ae6f266 #ffffff #ffffff #6ae6f266
@@ -122,6 +121,8 @@ bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
 
+# scrot & gimp - root
+bindsym Print exec scrot -e 'mv $f $$HOME/screenshots'
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -169,13 +170,13 @@ bar {
 	font xft:FontAwesome 14
 	colors {
 		#set transparent background
-		background #ffffff00
+		background #7b9095aa
 		#set statusline for i3blocks
-		statusline #e75671
+		statusline #8a0707
 		#workspace	   #border   #bg       #text
-		focused_workspace  #11111100 #6190bdaa #ffffffaa
-		inactive_workspace #11111100 #ffffffaa #6190bdaa
-		urgent_workspace   #11111100 #e75671aa #ffffffaa
+		focused_workspace  #8a0707 #8a0707 #ffffff
+		inactive_workspace #7b9095 #7b9095 #cccccc
+		urgent_workspace   #11111100 #cccccc #ffffffaa
 	}
 }
 
@@ -185,4 +186,3 @@ bar {
   exec sh ~/.fehbg 
   exec --no-startup-id compton -b
   exec --no-startup-id nm-applet
-  exec ~/.scripts/monitor.sh
