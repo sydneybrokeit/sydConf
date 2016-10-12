@@ -96,13 +96,14 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 # set workspace names to variables to make configuration easier
-set $ws1 "1:web/chat"
-set $ws2 "2:shell"
-set $ws3 "3:irc"
-set $ws4 "4:documentation"
-set $ws5 "5:media"
-set $ws6 "6:recording"
-set $ws7 "7:misc"
+set $ws1 "1:/"
+set $ws2 "2:"
+set $ws3 "3:"
+set $ws4 "4:"
+set $ws5 "5:"
+set $ws6 "6:"
+set $ws7 "7:"
+
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
