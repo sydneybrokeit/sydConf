@@ -165,8 +165,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 bar {
 	#-t option used to enable transparency, requires compton or other compositor
 	i3bar_command i3bar -t
-  	status_command i3blocks
-	font xft:FontAwesome 14
+	font xft:FontAwesome 10
 	colors {
 		#set transparent background
 		background #ffffff00
@@ -179,6 +178,24 @@ bar {
 	}
 }
 
+bar {
+	position top
+	i3bar_command i3bar -t
+	font xft:FontAwesome 11
+	workspace_buttons no
+	colors {
+		#set transparent background
+		background #666666aa
+		#set statusline for i3blocks
+		statusline #6ae6f2aa
+		
+	}
+	status_command i3blocks
+	tray_output none
+
+}
+
+
   exec xset -b
   exec xset -dpms
   exec xset s off
@@ -186,3 +203,4 @@ bar {
   exec --no-startup-id compton -b
   exec --no-startup-id nm-applet &
 #  exec ~/.scripts/monitor.sh
+#  exec --no-startup-id lemonbuddy top &

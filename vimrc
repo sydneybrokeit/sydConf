@@ -19,3 +19,8 @@ set nocompatible
 set  rtp+=/usr/lib/python3.5/site-packages/powerline/bindings/vim/
 set laststatus=2
 set t_Co=256
+
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
