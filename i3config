@@ -181,7 +181,7 @@ bar {
 bar {
 	position top
 	i3bar_command i3bar -t
-	font xft:FontAwesome 11
+	font pango:FontAwesome 11
 	workspace_buttons no
 	colors {
 		#set transparent background
