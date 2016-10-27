@@ -21,4 +21,5 @@ RAM_Block= barChar * numBlocks
 RAM_Block_J = bgChar * (totalBlocks-numBlocks)
 
 print("<span color=\"" + barColor + "\">" + RAM_Block + "</span>" + "<span color=\"" + bgColor + "\">" + RAM_Block_J + "</span>")
-print(RAM_Block_J)
+print("<span color=\"" + barColor + "\">" + RAM_Block + "</span>" + "<span color=\"" + bgColor + "\">" + RAM_Block_J + "</span>")
+

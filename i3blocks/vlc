@@ -1,0 +1,9 @@
+echo "$( playerctl -p vlc metadata title | \
+	sed -e 's/The Changelog #\([0-9]*\)/CL \1/g'
+	)"
+
+case $BLOCK_BUTTON in
+	1) toggle ;;
+	4) playerctl -p vlc volume 0.05+ ;;
+	5) playerctl -p vlc volume 0.05- ;;
+esac
