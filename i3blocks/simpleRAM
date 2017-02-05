@@ -4,12 +4,12 @@ import psutil
 #How wide to make the bar (default is 20)
 totalBlocks=20
 
-barColor="#d2f9fd"
-bgColor="#00becf"
-#barChar="█"
-#bgChar="█" 
-barChar="|"
-bgChar="|"
+barColor="#6190bd"
+bgColor="#ebbab9"
+barChar="█"
+bgChar="█" 
+#barChar="|"
+#bgChar="|"
 blockPercent=100/totalBlocks
 
 RAM_Util=psutil.virtual_memory().percent

@@ -1,0 +1,15 @@
+#!/usr/bin/python
+
+import psutil
+import os
+
+CPU_Util=psutil.cpu_percent(interval=0.75)
+CPU_Util_str=str(CPU_Util).rjust(4, '0')
+print(CPU_Util_str)
+print(CPU_Util_str)
+
+if CPU_Util > 80:
+    print("#FFFF00")
+elif CPU_Util > 50:
+    print("#FF0000")
+
