@@ -1,0 +1,6 @@
+if grep vlc $HOME/.player
+then
+	echo "spotify" > $HOME/.player
+else
+	echo "vlc" > $HOME/.player
+fi

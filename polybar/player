@@ -1,0 +1,9 @@
+PLAYER=$(cat $HOME/.player)
+case $(playerctl -p $PLAYER status) in
+	Playing) SYMBOL="" ;;
+	Paused) SYMBOL="" ;;
+esac
+
+echo "$SYMBOL $( playerctl -p $PLAYER metadata title )"
+
+

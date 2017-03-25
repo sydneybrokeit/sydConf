@@ -1,0 +1,308 @@
+; [settings]
+; throttle_ms = 50
+; throttle_limit = 3
+
+[bar/top]
+; bottom = true
+width = 100%
+;monitor = DP-1
+monitor-fallback = LVDS1
+; height = 34
+height = 20
+clickareas = 35
+dock = false
+
+background = #0071A8D7
+foreground = #3E69B9
+linecolor = ${bar/bottom.background}
+
+locale = fr_FR.UTF-8
+210-867-6316
+tray-position = left
+tray-detached=true
+spacing = 4
+;spacing = 2
+lineheight = 2
+padding-left = 2
+padding-right = 5
+module-margin-left = 3
+module-margin-right = 3
+;module_margin_left = 1
+;module_margin_right = 1
+
+;font-0 = envypn:pixelsize=13;0
+font-0 = Sans-Regular:size=8;0
+font-1 = MaterialIcons:size=10;0
+; font-2 = Termsynu:size=8;-1
+font-2 = FontAwesome:size=10;0
+font-3 = Siji:size=10;0
+
+modules-center = player
+modules-left = date
+modules-right = wireless-network battery volume
+
+[bar/bottom]
+bottom = true
+width = 100%
+;monitor = DP-1
+monitor-fallback = LVDS1
+height = 28
+dock = false
+
+background = #003E69B9
+foreground = ${bar/top.foreground}
+linecolor = ${bar/top.background}
+
+spacing = 3
+lineheight = 2
+padding-left = 4
+padding-right = 4
+module-margin-left = 0
+module-margin-right = 6
+
+font-0 = Sans-Regular:size=8;0
+font-1 = Unifont:size=6;-3
+font-2 = FontAwesome:size=8;-2
+; font-3 = NotoSans-Regular:size=8;-1
+font-3 = MaterialIcons:size=10;-1
+; font-5 = Termsynu:size=8;-1
+
+modules-left = i3
+modules-right = cpu memory
+[bar/external_bottom]
+inherit_from = bar/bottom
+monitor = DP-2
+monitor-fallback = HDMI1
+bottom = true
+width = ${bar/bottom.width}
+height = ${bar/bottom.height}
+
+background = ${bar/bottom.background}
+foreground = ${bar/bottom.foreground}
+linecolor = ${bar/bottom.linecolor}
+
+spacing = ${bar/bottom.spacing}
+lineheight = ${bar/bottom.lineheight}
+padding_right = ${bar/bottom.padding_right}
+module_margin_left = ${bar/bottom.module_margin_left}
+module_margin_right = ${bar/bottom.module_margin_right}
+
+font-0 = ${bar/bottom.font-0}
+font-1 = ${bar/bottom.font-1}
+font-2 = ${bar/bottom.font-2}
+font-3 = ${bar/bottom.font-3}
+; font-4 = ${bar/bottom.font-4}
+
+modules-left = i3
+;modules-center =
+
+[bar/external_top]
+inherit_from = bar/top
+monitor = DP-2
+monitor-fallback = HDMI1
+bottom = false
+width = ${bar/top.width}
+height = ${bar/top.height}
+
+background = ${bar/top.background}
+foreground = ${bar/top.foreground}
+linecolor = ${bar/top.linecolor}
+
+spacing = ${bar/top.spacing}
+lineheight = ${bar/top.lineheight}
+padding_right = ${bar/top.padding_right}
+module_margin_left = ${bar/top.module_margin_left}
+module_margin_right = ${bar/top.module_margin_right}
+
+font-0 = ${bar/bottom.font-0}
+font-1 = ${bar/bottom.font-1}
+font-2 = ${bar/bottom.font-2}
+font-3 = ${bar/bottom.font-3}
+; font-4 = ${bar/bottom.font-4}
+
+; modules-left =
+modules-right = date
+; modules-center = player
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format = <label> <bar-load>
+label = CPU
+
+bar-load-width = 30
+bar-load-foreground-0 = #aaff77
+bar-load-foreground-1 = #aaff77
+bar-load-foreground-2 = #fba922
+bar-load-foreground-3 = #ff5555
+bar-load-indicator = |
+bar-load-indicator-foreground = #ff
+bar-load-indicator-font = 3
+bar-load-fill = ─
+bar-load-fill-font = 3
+bar-load-empty = ─
+bar-load-empty-font = 3
+bar-load-empty-foreground = #444444
+
+[module/date]
+type = internal/date
+date =    %%{F#999}%a %e %b%%{F-}  %%{F#fff}%H:%M:%S%%{F-}
+
+[module/i3]
+type = internal/i3
+
+pin-workspaces = true
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;7
+ws-icon-7 = 8;8
+ws-icon-8 = 9;9
+ws-icon-9 = 10;0
+ws-icon-10 = 11;
+ws-icon-11 = 12;
+ws-icon-12 = 13;
+ws-icon-13 = 14;O
+ws-icon-14 = 15;P
+ws-icon-15 = 16;J
+ws-icon-16 = 17;K
+ws-icon-17 = 18;
+ws-icon-18 = 19;
+ws-icon-default = ♟
+
+label-focused = %name% %icon%
+label-focused-foreground = #B2E0EF
+label-focused-background = #3E69B9
+label-focused-underline = #657B9E
+label-focused-padding = 3
+
+label-unfocused = %name% %icon%
+label-unfocused-background = #B2E0EF
+label-unfocused-padding = 3
+
+label-visible = %name% %icon%
+label-visible-underline = #ffffff
+label-visible-padding = 3
+
+label-urgent =%name% %icon%
+label-urgent-foreground = #B2E0EF
+label-urgent-background = #78C7B4
+label-urgent-padding = 3
+
+[module/memory]
+type = internal/memory
+format = <label> <bar-used>
+label = RAM
+
+bar-used-width = 30
+bar-used-foreground-0 = #C9D7ED
+bar-used-foreground-1 = #A9BFE2
+bar-used-foreground-2 = #8AA8D8
+bar-used-foreground-3 = #6E262A
+bar-used-indicator = |
+bar-used-indicator-foreground = #ff
+bar-used-indicator-font = 3
+bar-used-fill = ─
+bar-used-fill-font = 3
+bar-used-empty = ─
+bar-used-empty-font = 3
+bar-used-empty-foreground = #444444
+
+[module/mpd]
+type = internal/mpd
+clickable_progress = true
+format-online = <icon-prev> <icon-stop> <toggle> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>  <label-song>
+
+; label-song = %artist% - %album% - %title%
+label-song = %artist% - %title%
+
+icon-play = 
+icon-pause = 
+icon-stop = 
+icon-prev = 
+icon-next = 
+icon-random = 
+icon-repeat = 
+
+toggle_on-foreground =
+toggle_off-foreground = #55
+
+bar-progress-width = 10
+bar-progress-format = %{A4:mpdseek+2: A5:mpdseek-2:}%fill%%indicator%%empty%%{A A}
+bar-progress-indicator = |
+bar-progress-indicator-foreground = #ff
+bar-progress-indicator-font = 3
+bar-progress-fill = ─
+bar-progress-fill-foreground = #bb
+bar-progress-fill-font = 3
+bar-progress-empty = ─
+bar-progress-empty-font = 3
+bar-progress-empty-foreground = #44
+
+[module/volume]
+type = internal/volume
+; speaker_mixer = Speaker
+; headphone_mixer = Headphone
+; headphone_control_numid = 9
+
+format-volume = <ramp-volume> <label-volume>
+label-muted =   muted
+label-muted-foreground = #66
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
+
+[module/wireless-network]
+type = internal/network
+interface = wlo1
+interval = 3.0
+ping_interval = 10
+
+format-connected = <ramp-signal> <label-connected>
+label-connected = %essid%
+label-disconnected =    not connected
+label-disconnected-foreground = #66
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+
+animation-packetloss-0 = 
+animation-packetloss-0-foreground = #ffa64c
+animation-packetloss-1 = 
+animation-packetloss-1-foreground = ${bar/top.foreground}
+animation-packetloss-framerate_ms = 500
+
+[module/battery]
+type = internal/battery
+
+battery = BAT0
+adapter = AC
+
+poll-interval = 5
+
+label-charging = CHR %percentage%
+label-discharging = DIS %percentage%
+label-full = FUL
+
+[module/player]
+type = custom/script
+exec = $HOME/.config/polybar/player
+interval = 1
+
+format = <label>
+label = %output%
+
+click-left = playerctl -p $(cat $HOME/.player) play-pause
+click-right = exec $HOME/.config/polybar/toggleplayer
+scroll-up = playerctl -p $(cat $HOME/.player) volume 0.05+
+scroll-down = playerctl -p $(cat $HOME/.player) volume 0.05-
+; vim:ft=dosini
