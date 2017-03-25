@@ -9,8 +9,6 @@ COMPTON_CONF=$HOME/.config/compton.conf
 POLYBAR_CONF=$HOME/.config/polybar
 
 ln -sf $PWD/i3config $I3_CONF
-ln -sf $PWD/i3blocks.conf $I3_BLOCKS_CONF
-ln -sf $PWD/i3blocks $I3_BLOCKS_DIR
 ln -sf $PWD/termite.config $TERMITE_CONFIG
 ln -sf $PWD/vimrc $VIMRC_LOC
 ln -sf $PWD/vim/ $VIM_DIR

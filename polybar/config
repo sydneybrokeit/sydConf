@@ -5,24 +5,23 @@
 [bar/top]
 ; bottom = true
 width = 100%
-;monitor = DP-1
+monitor = HDMI1
 monitor-fallback = LVDS1
-; height = 34
-height = 20
+height = 16
 clickareas = 35
 dock = false
+
 
 background = #0071A8D7
 foreground = #3E69B9
 linecolor = ${bar/bottom.background}
 
 locale = fr_FR.UTF-8
-210-867-6316
 tray-position = left
 tray-detached=true
 spacing = 4
 ;spacing = 2
-lineheight = 2
+lineheight = 0
 padding-left = 2
 padding-right = 5
 module-margin-left = 3
@@ -31,17 +30,19 @@ module-margin-right = 3
 ;module_margin_right = 1
 
 ;font-0 = envypn:pixelsize=13;0
-font-0 = Sans-Regular:size=8;0
+font-0 = Sans-Regular:size=10;3
 font-1 = MaterialIcons:size=10;0
 ; font-2 = Termsynu:size=8;-1
-font-2 = FontAwesome:size=10;0
+font-2 = FontAwesome:size=14;-2
 font-3 = Siji:size=10;0
 
 modules-center = player
 modules-left = date
 modules-right = wireless-network battery volume
+; lineheight = 2
 
 [bar/bottom]
+
 bottom = true
 width = 100%
 ;monitor = DP-1
@@ -53,23 +54,26 @@ background = #003E69B9
 foreground = ${bar/top.foreground}
 linecolor = ${bar/top.background}
 
-spacing = 3
+spacing = 0
 lineheight = 2
-padding-left = 4
+padding-left = 0
 padding-right = 4
 module-margin-left = 0
 module-margin-right = 6
 
-font-0 = Sans-Regular:size=8;0
-font-1 = Unifont:size=6;-3
-font-2 = FontAwesome:size=8;-2
-; font-3 = NotoSans-Regular:size=8;-1
-font-3 = MaterialIcons:size=10;-1
-; font-5 = Termsynu:size=8;-1
+;font-0 = envypn:pixelsize=13;0
+font-0 = Sans-Regular:size=10;3
+font-1 = MaterialIcons:size=10;0
+; font-2 = Termsynu:size=8;-1
+font-2 = FontAwesome:size=14;3
+font-3 = Siji:size=10;0
 
 modules-left = i3
 modules-right = cpu memory
+
+
 [bar/external_bottom]
+
 inherit_from = bar/bottom
 monitor = DP-2
 monitor-fallback = HDMI1
@@ -84,7 +88,8 @@ linecolor = ${bar/bottom.linecolor}
 spacing = ${bar/bottom.spacing}
 lineheight = ${bar/bottom.lineheight}
 padding_right = ${bar/bottom.padding_right}
-module_margin_left = ${bar/bottom.module_margin_left}
+module_margin_left = 0
+padding-left = 0
 module_margin_right = ${bar/bottom.module_margin_right}
 
 font-0 = ${bar/bottom.font-0}
@@ -98,7 +103,7 @@ modules-left = i3
 
 [bar/external_top]
 inherit_from = bar/top
-monitor = DP-2
+monitor = VGA1
 monitor-fallback = HDMI1
 bottom = false
 width = ${bar/top.width}
@@ -146,7 +151,7 @@ bar-load-empty-foreground = #444444
 
 [module/date]
 type = internal/date
-date =    %%{F#999}%a %e %b%%{F-}  %%{F#fff}%H:%M:%S%%{F-}
+date =  %%{F#fff}%H:%M:%S%%{F-}
 
 [module/i3]
 type = internal/i3
@@ -185,6 +190,7 @@ label-unfocused-background = #B2E0EF
 label-unfocused-padding = 3
 
 label-visible = %name% %icon%
+label-visible-background = #B2E0EF
 label-visible-underline = #ffffff
 label-visible-padding = 3
 
