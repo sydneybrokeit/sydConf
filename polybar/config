@@ -45,14 +45,15 @@ modules-right = wireless-network battery volume
 
 bottom = true
 width = 100%
-;monitor = DP-1
+monitor = HDMI1
 monitor-fallback = LVDS1
 height = 28
 dock = false
 
-background = #003E69B9
+background = #00000000
 foreground = ${bar/top.foreground}
-linecolor = ${bar/top.background}
+line-color = #333333
+line-size = 4
 
 spacing = 0
 lineheight = 2
@@ -75,7 +76,7 @@ modules-right = cpu memory
 [bar/external_bottom]
 
 inherit_from = bar/bottom
-monitor = DP-2
+monitor = VGA1
 monitor-fallback = HDMI1
 bottom = true
 width = ${bar/bottom.width}
@@ -126,7 +127,7 @@ font-3 = ${bar/bottom.font-3}
 ; font-4 = ${bar/bottom.font-4}
 
 ; modules-left =
-modules-right = date
+modules-right = date updates
 ; modules-center = player
 
 [module/cpu]
@@ -182,21 +183,22 @@ ws-icon-default = ♟
 label-focused = %name% %icon%
 label-focused-foreground = #B2E0EF
 label-focused-background = #3E69B9
-label-focused-underline = #657B9E
+label-focused-underline = #
 label-focused-padding = 3
 
 label-unfocused = %name% %icon%
 label-unfocused-background = #B2E0EF
+label-unfocused-underline = #3E69B9
 label-unfocused-padding = 3
 
 label-visible = %name% %icon%
 label-visible-background = #B2E0EF
-label-visible-underline = #ffffff
+label-visible-underline = #3E69B9
 label-visible-padding = 3
 
 label-urgent =%name% %icon%
 label-urgent-foreground = #B2E0EF
-label-urgent-background = #78C7B4
+label-urgent-background = #555DA1
 label-urgent-padding = 3
 
 [module/memory]
@@ -311,4 +313,13 @@ click-left = playerctl -p $(cat $HOME/.player) play-pause
 click-right = exec $HOME/.config/polybar/toggleplayer
 scroll-up = playerctl -p $(cat $HOME/.player) volume 0.05+
 scroll-down = playerctl -p $(cat $HOME/.player) volume 0.05-
+
+[module/updates]
+type = custom/script
+exec = $HOME/.pacaur.sh
+interval = 30
+
+format = <label>
+label = %output%
+
 ; vim:ft=dosini
