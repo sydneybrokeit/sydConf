@@ -15,3 +15,5 @@ ln -sf $PWD/vim/ $VIM_DIR
 ln -sf $PWD/Xresources $Xresources_FILE
 ln -sf $PWD/compton.conf $COMPTON_CONF
 ln -sf $PWD/polybar $POLYBAR_CONF
+ln -sf $PWD/dunstrc $HOME/.config/dunst/dunstrc
+ln -sf $PWD/ohmyzsh $HOME/.ohmyzsh

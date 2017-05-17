@@ -12,8 +12,8 @@ clickareas = 35
 dock = false
 
 
-background = #0071A8D7
-foreground = #3E69B9
+background = #476983
+foreground = #7BBCDA
 linecolor = ${bar/bottom.background}
 
 locale = fr_FR.UTF-8
@@ -50,7 +50,7 @@ monitor-fallback = LVDS1
 height = 28
 dock = false
 
-background = #00000000
+background = ${bar/top.background}
 foreground = ${bar/top.foreground}
 line-color = #333333
 line-size = 4
@@ -181,19 +181,21 @@ ws-icon-18 = 19;
 ws-icon-default = ♟
 
 label-focused = %name% %icon%
-label-focused-foreground = #B2E0EF
-label-focused-background = #3E69B9
-label-focused-underline = #
+label-focused-foreground = #476983
+label-focused-background = #E5EAEA
+label-focused-underline = #EF7AAA
 label-focused-padding = 3
 
 label-unfocused = %name% %icon%
-label-unfocused-background = #B2E0EF
-label-unfocused-underline = #3E69B9
+label-unfocused-background = #7BBCDA
+label-unfocused-underline = #EF7AAA
+label-unfocused-foreground = #E5EAEA
 label-unfocused-padding = 3
 
 label-visible = %name% %icon%
-label-visible-background = #B2E0EF
-label-visible-underline = #3E69B9
+label-visible-background = #7BBCDA
+label-visible-underline = #EF7AAA
+label-visible-foreground = #E5EAEA
 label-visible-padding = 3
 
 label-urgent =%name% %icon%
