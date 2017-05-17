@@ -17,3 +17,4 @@ ln -sf $PWD/compton.conf $COMPTON_CONF
 ln -sf $PWD/polybar $POLYBAR_CONF
 ln -sf $PWD/dunstrc $HOME/.config/dunst/dunstrc
 ln -sf $PWD/ohmyzsh $HOME/.ohmyzsh
+ln -sf $PWD/.zshrc $HOME/.zshrc
